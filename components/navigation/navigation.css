@@ -5,6 +5,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  height: 40px;
 }
 
 .navigation__list {
@@ -27,12 +28,10 @@
 }
 
 .navigation__link {
-  padding: 1.5rem 0.5rem;
+  padding: 1rem 0.5rem;
   color: inherit;
   background: transparent;
   border: none;
   display: flex;
   justify-content: center;
 }
-
-

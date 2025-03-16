@@ -6,50 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz-App</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./form.js" defer></script>
   </head>
-  <body>
-    <header class="header">
-      <h1 class="header__title">Bookmarks</h1>
-    </header>
-    <main>
-      <ul class="card-list">
-        <li class="card-list__item">
-          <article class="card">
-            <h2 class="card__question">
-              Daniel Radcliffe became a global star in the film industry due to
-              his performance in which film franchise?
-            </h2>
-            <button class="card__button-answer" type="button">
-              Show answer
-            </button>
-            <p class="card__answer">Harry Potter</p>
-            <ul class="card__tag-list">
-              <li class="card__tag-list-item">#danielradcliffe</li>
-              <li class="card__tag-list-item">#hewhomustnotbenamed</li>
-              <li class="card__tag-list-item">#abracadabra</li>
-            </ul>
-            <div class="card__button-bookmark">
-              <button
-                class="bookmark bookmark--active"
-                aria-label="bookmark"
-                type="button"
-              >
-                <svg
-                  class="bookmark__icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewbox="0 0 24 24"
-                >
-                  <path
-                    d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"
-                  />
-                </svg>
-              </button>
-            </div>
-          </article>
-        </li>
-      </ul>
-    </main>
-
+  <body data-js="body-data">
+    <form data-js="form-data">
+      <h1 data-js="form-title">Add Your Questions</h1>
+      <fieldset>
+        <label for="question">The Question:</label>
+        <textarea
+          name="question"
+          id="question"
+          maxlength="150"
+          data-js="form-question"
+          required
+        ></textarea>
+        <label for="answer">The Answer:</label>
+        <textarea
+          name="answer"
+          id="answer"
+          maxlength="150"
+          data-js="form-answer"
+          required
+        ></textarea>
+        <label for="tag">Tag:</label>
+        <input name="tag" type="text" id="tag" data-js="form-tag" required />
+        <button class="form-submit_button" type="submit" data-js="form-button">
+          submit
+        </button>
+      </fieldset>
+    </form>
+    <section id="new-cards-container"></section>
     <nav class="navigation">
       <ul class="navigation__list">
         <li class="navigation__list-item">
@@ -70,7 +56,7 @@
             </svg>
           </a>
         </li>
-        <li class="navigation__list-item navigation__list-item--active">
+        <li class="navigation__list-item">
           <a
             class="navigation__link"
             href="bookmarks.html"
@@ -88,7 +74,7 @@
             </svg>
           </a>
         </li>
-        <li class="navigation__list-item">
+        <li class="navigation__list-item navigation__list-item--active">
           <a
             class="navigation__link"
             href="form.html"

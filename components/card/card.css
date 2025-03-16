@@ -9,7 +9,8 @@
   margin: 0 0 2rem;
 }
 
-.card__button-answer {
+.card__button-answer,
+.form-submit_button {
   background: var(--secondary);
   color: var(--white);
   border: none;

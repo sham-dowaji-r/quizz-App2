@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz-App</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./profile.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -15,20 +16,22 @@
       <div class="profile__card">
         <img
           class="profile__card-img"
-          src="https://source.unsplash.com/random/300x300?portrait"
+          src="./wireframes/IMG_20230104_195010_596.jpg"
           alt=""
           height="200"
           width="200"
         />
-        <h2 class="profile-card__name">Max Doe</h2>
+        <h2 class="profile-card__name">Sham</h2>
       </div>
-      <h3>About me</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum
-        dignissimos, reprehenderit quam facilis animi in distinctio nemo est
-        culpa velit non unde expedita porro. Expedita animi quo voluptates
-        blanditiis libero?
-      </p>
+      <div>
+        <h3 class="about-me-h3">About me</h3>
+        <p class="about-me-p">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum
+          dignissimos, reprehenderit quam facilis animi in distinctio nemo est
+          culpa velit non unde expedita porro. Expedita animi quo voluptates
+          blanditiis libero?
+        </p>
+      </div>
       <ul class="counter-list">
         <li class="counter-list__item">
           <svg
@@ -58,7 +61,7 @@
           <span>4</span>
         </li>
       </ul>
-      <h2 id="title">Settings</h2>
+      <h2 class="settings-title" id="title">Settings</h2>
       <form class="profile__settings" aria-labelledby="title">
         <input
           type="checkbox"
@@ -107,6 +110,32 @@
               <path
                 d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z"
               />
+            </svg>
+          </a>
+        </li>
+        <li class="navigation__list-item">
+          <a
+            class="navigation__link"
+            href="form.html"
+            aria-label="go to form page"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-badge-plus"
+            >
+              <path
+                d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"
+              />
+              <line x1="12" x2="12" y1="8" y2="16" />
+              <line x1="8" x2="16" y1="12" y2="12" />
             </svg>
           </a>
         </li>

@@ -11,11 +11,11 @@
   cursor: pointer;
 }
 
-.bookmark--active {
-  color: var(--black);
-}
-
 .bookmark__icon {
   fill: currentcolor;
   width: 2em;
+}
+
+.bookmark--active {
+  color: var(--black);
 }
