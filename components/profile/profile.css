@@ -82,66 +82,89 @@
   fill: var(--secondary);
   margin-right: 8px;
 }
-
-/* تحسين إعدادات البروفايل */
-.settings-title {
-  margin-top: 2rem;
-  text-align: left;
-}
-.profile__settings {
-  margin-top: 1rem;
-  text-align: left;
-}
-.profile__settings-darkmode-input {
-  display: none;
-}
-
-.profile__settings-darkmode-label {
-  display: flex;
-  cursor: pointer;
-  background: #ddd;
-  border-radius: 20px;
-  padding: 5px;
-  width: 200px;
-  position: relative;
-}
-
-.profile__settings-darkmode-label:before {
-  content: "";
-  width: 20px;
-  height: 20px;
-  background: var(--white);
-  border-radius: 50%;
-  position: absolute;
-  top: 0px;
-  left: 170px;
-  transition: left 0.3s;
-}
-
-/* تحسين الوضع الداكن */
 .dark-mode {
-  background-color: #121212;
-  color: var(--white);
+  background-color: #222;
+  color: white;
 }
 
 .dark-mode .header {
   background-color: #333;
-  color: var(--white);
+  color: white;
 }
 
-.dark-mode .profile__card,
-.dark-mode .profile-card__name,
-.dark-mode .about-me-h3,
-.dark-mode .about-me-p,
-.dark-mode .counter-list__item {
-  background-color: #1e1e1e;
-  color: var(--white);
-}
-
+.dark-mode .profile__settings,
 .dark-mode .profile__settings-darkmode-label {
-  background: #666;
+  background: #444;
+  color: white;
+}
+.dark-mode .settings-title {
+  color: white;
+}
+/* تحسين إعدادات البروفايل */
+.settings-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ddd;
 }
 
-.dark-mode .profile__settings-darkmode-label:before {
+/* تحسين حاوية الإعدادات */
+.profile__settings {
+  justify-content: space-between;
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 217px;
+}
+
+/* ضبط النص ليكون بمحاذاة الزر */
+.profile__settings-darkmode-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #444;
+  cursor: pointer;
+}
+
+/* إخفاء الـ input الأصلي */
+.profile__settings-darkmode-input {
+  display: none;
+}
+
+/* تصميم الزر المنزلق */
+.toggle-slider {
+  width: 50px;
+  height: 25px;
+  background: #ccc;
+  border-radius: 25px;
+  position: relative;
+  transition: background 0.3s;
+}
+
+/* الدائرة المتحركة داخل الزر */
+.toggle-slider::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
   background: var(--white);
+  border-radius: 50%;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  transition: left 0.3s;
+}
+
+/* تفعيل الوضع الداكن عند التبديل */
+.profile__settings-darkmode-input:checked + .toggle-slider {
+  background: var(--black);
+}
+
+/* تحريك الدائرة عند التفعيل */
+.profile__settings-darkmode-input:checked + .toggle-slider::before {
+  left: 25px;
 }
