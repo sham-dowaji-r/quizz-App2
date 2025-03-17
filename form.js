@@ -1,5 +1,6 @@
 const form = document.querySelector('[data-js="form-data"]');
 const body = document.querySelector('[data-js = "body-data"]');
+
 const questionInput = document.querySelector('[data-js="form-question"]');
 const questionCounter = document.createElement("p");
 questionCounter.textContent = 150; // تعيين القيمة الأولية للعداد
@@ -9,6 +10,7 @@ const answerInput = document.querySelector('[data-js="form-answer"]');
 const answerCounter = document.createElement("p");
 answerCounter.textContent = 150; // تعيين القيمة الأولية للعداد
 answerInput.after(answerCounter);
+
 const tagInput = document.querySelector('[data-js = "form-tag"]');
 
 // دالة لتحديث العداد عند الكتابة
@@ -80,9 +82,14 @@ form.addEventListener("submit", (event) => {
   // إظهار وإخفاء الجواب عند الضغط على الزر
   const answerParagraph = card.querySelector(".card__answer");
   const answerButton = card.querySelector(".card__button-answer");
+
   answerButton.addEventListener("click", () => {
-    answerParagraph.style.display =
-      answerParagraph.style.display === "block" ? "none" : "block";
+    answerParagraph.classList.toggle("card__answer--active");
+    if (answerButton.classList.contains("card__answer--active")) {
+      answerButton.textContent = "Hide Answer";
+    } else {
+      answerButton.textContent = "Show Answer";
+    }
   });
 
   // إضافة الكارت إلى الصفحة
