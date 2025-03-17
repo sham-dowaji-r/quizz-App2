@@ -1,10 +1,10 @@
 :root {
-  --primary: #ffffff;
-  --secondary: #ff4a11;
-  --secondary-light: #fddcd2;
+  --primary: #f3efe0; /* بيج فاتح */
+  --secondary: #a1c398; /* أخضر زيتوني ناعم */
+  --secondary-light: #d3e4cd; /* أخضر باهت */
   --white: #ffffff;
-  --black: #252629;
-  --background: var(--white);
+  --black: #2e2e2e; /* رمادي غامق بدلاً من الأسود الحاد */
+  --background: var(--primary);
   --foreground: var(--black);
   --ff-primary: sans-serif;
   --ff-serif: serif;
