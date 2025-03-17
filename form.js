@@ -3,12 +3,14 @@ const body = document.querySelector('[data-js = "body-data"]');
 
 const questionInput = document.querySelector('[data-js="form-question"]');
 const questionCounter = document.createElement("p");
+questionCounter.classList.add("counter");
 questionCounter.textContent = 150; // تعيين القيمة الأولية للعداد
 questionInput.after(questionCounter);
 
 const answerInput = document.querySelector('[data-js="form-answer"]');
 const answerCounter = document.createElement("p");
 answerCounter.textContent = 150; // تعيين القيمة الأولية للعداد
+answerCounter.classList.add("counter");
 answerInput.after(answerCounter);
 
 const tagInput = document.querySelector('[data-js = "form-tag"]');
